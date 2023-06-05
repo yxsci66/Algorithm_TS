@@ -14,8 +14,8 @@
       "runtimeArgs": ["--nolazy", "-r", "ts-node/register"],
       "sourceMaps": true,
       "cwd": "${workspaceRoot}",
-      "console": "integratedTerminal",
-      "internalConsoleOptions": "neverOpen",
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
       "runtimeExecutable": "D:/my_tools/nvm/v18.16.0/node" // path of node
     }
   ]
