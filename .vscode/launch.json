@@ -5,6 +5,19 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "mocha debugger",
+      "request": "launch",
+      "runtimeArgs": [
+        "run-script",
+        "test"
+      ],
+      "runtimeExecutable": "pnpm",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
+    {
       "name": "TS Debugger",
       "type": "node",
       "request": "launch",
@@ -16,7 +29,7 @@
       "cwd": "${workspaceRoot}",
       "console": "internalConsole",
       "internalConsoleOptions": "openOnSessionStart",
-      "runtimeExecutable": "D:/my_tools/nvm/v18.16.0/node" // path of node
+      "runtimeExecutable": "D:/03_tools/nvm/v20.9.0/node" // path of node
     }
   ]
 }
