@@ -6,6 +6,7 @@
   "configurations": [
     {
       "name": "mocha debugger",
+      "type": "node",
       "request": "launch",
       "runtimeArgs": [
         "run-script",
@@ -15,7 +16,10 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "type": "node"
+      "sourceMaps": true,
+      "cwd": "${workspaceRoot}",
+      "console": "internalConsole",
+      "internalConsoleOptions": "openOnSessionStart",
     },
     {
       "name": "TS Debugger",

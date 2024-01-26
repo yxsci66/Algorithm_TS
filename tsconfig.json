@@ -17,6 +17,7 @@
   },
   "include": [
     "src",
-    "test/**/*.test.ts"
+    "test/**/*.test.ts",
+    "data_structure"
   ],
 }

@@ -1,6 +1,4 @@
-export function helloWorld() {
-  const arr = [1, 2, 3];
-  for (const i of arr) {
-    console.log(i);
-  }
-}
+export type TestUnitType<T extends (...args: any) => any> = {
+  input: Parameters<T>;
+  output: ReturnType<T>;
+};
