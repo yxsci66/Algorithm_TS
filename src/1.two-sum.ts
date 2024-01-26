@@ -61,9 +61,23 @@
 
 // @lc code=start
 export function twoSum(nums: number[], target: number): number[] {
-  nums.pop();
-  target += 1;
-  nums.push(target);
-  return [0, 1];
+  const numMap = new Map();
+  for (let i = 0; i < nums.length; i++) {
+    const subNum = target - nums[i]!;
+    if (numMap.has(subNum)) {
+      return [i, numMap.get(subNum)];
+    }
+    numMap.set(nums[i]!, i);
+  }
+  return [-1, -1];
 }
+// export function twoSum(nums: number[], target: number): number[] {
+//   let arr = Array.from({ length: 2 }) as number[];
+//   for (let i = 0; i < nums.length - 1; i++) {
+//     for (let j = i; j < nums.length; j++) {
+//       if (nums[i]! + nums[j]! === target) arr = [i, j];
+//     }
+//   }
+//   return arr;
+// }
 // @lc code=end
