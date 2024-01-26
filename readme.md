@@ -1,6 +1,6 @@
 # leetcode
 
-This is a repository for leetcode, which supports debugging.
+This is a repository for leetcode, which supports debugging with mocha.
 
 ## debug config
 
@@ -31,6 +31,19 @@ This is a repository for leetcode, which supports debugging.
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
+    {
+      "name": "mocha debugger",
+      "request": "launch",
+      "runtimeArgs": [
+        "run-script",
+        "test"
+      ],
+      "runtimeExecutable": "pnpm",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    },
     {
       "name": "TS Debugger",
       "type": "node",
