@@ -5,7 +5,7 @@
     "lib": ["ES2020", "dom"],
     "sourceMap": true,
     "esModuleInterop": true,
-    "strictFunctionTypes": false,
+    // "strictFunctionTypes": false,
     "resolveJsonModule": true,
     "strict": true,
     "noImplicitReturns": true,
