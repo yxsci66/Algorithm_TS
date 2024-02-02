@@ -78,24 +78,24 @@ import { ListNode } from "../data_structure/module";
  * @param {ListNode | null} l2 - The second linked list
  * @return {ListNode | null} The sum of the two linked lists
  */
-export function addTwoNumbers(
-  l1: ListNode | null,
-  l2: ListNode | null
-): ListNode | null {
-  let l = new ListNode();
-  const returnList = l;
-  let lastCarry = 0;
-  while (l1 || l2 || lastCarry) {
-    l.next = new ListNode();
-    l = l.next as ListNode;
-    const sum = (l1?.val ?? 0) + (l2?.val ?? 0) + lastCarry;
-    l.val = sum % 10;
-    lastCarry = parseInt((sum / 10).toString());
-    l1 = l1?.next as ListNode;
-    l2 = l2?.next as ListNode;
-  }
-  return returnList.next;
-}
+// export function addTwoNumbers(
+//   l1: ListNode | null,
+//   l2: ListNode | null
+// ): ListNode | null {
+//   let l = new ListNode();
+//   const returnList = l;
+//   let lastCarry = 0;
+//   while (l1 || l2 || lastCarry) {
+//     l.next = new ListNode();
+//     l = l.next as ListNode;
+//     const sum = (l1?.val ?? 0) + (l2?.val ?? 0) + lastCarry;
+//     l.val = sum % 10;
+//     lastCarry = parseInt((sum / 10).toString());
+//     l1 = l1?.next as ListNode;
+//     l2 = l2?.next as ListNode;
+//   }
+//   return returnList.next;
+// }
 
 /**
  * (Recursive-Function)Adds two numbers represented by linked lists.
@@ -105,18 +105,18 @@ export function addTwoNumbers(
  * @param {number} lastCarry - The carry value
  * @return {ListNode | null} The head of the resulting linked list
  */
-// export function addTwoNumbers(
-//   l1: ListNode | null,
-//   l2: ListNode | null,
-//   lastCarry = 0
-// ): ListNode | null {
-//   if (!l1 && !l2 && !lastCarry) return null;
+export function addTwoNumbers(
+  l1: ListNode | null,
+  l2: ListNode | null,
+  lastCarry = 0
+): ListNode | null {
+  if (!l1 && !l2 && !lastCarry) return null;
 
-//   const total: number = (l1?.val ?? 0) + (l2?.val ?? 0) + (lastCarry ?? 0);
-//   lastCarry = parseInt(total / 10 + "");
-//   return new ListNode(
-//     total % 10,
-//     addTwoNumbers(l1?.next as ListNode, l2?.next as ListNode, lastCarry)
-//   );
-// }
+  const total: number = (l1?.val ?? 0) + (l2?.val ?? 0) + (lastCarry ?? 0);
+  lastCarry = parseInt(total / 10 + "");
+  return new ListNode(
+    total % 10,
+    addTwoNumbers(l1?.next as ListNode, l2?.next as ListNode, lastCarry)
+  );
+}
 // @lc code=end

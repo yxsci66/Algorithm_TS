@@ -72,19 +72,16 @@ export function mergeTwoLists(
   l1: ListNode | null,
   l2: ListNode | null
 ): ListNode | null {
-  if (l1 === null) {
+  if (!l1) {
     return l2;
   }
-  if (l2 === null) {
+  if (!l2) {
     return l1;
   }
-
   if (l1.val < l2.val) {
-    l1.next = mergeTwoLists(l1.next, l2);
-    return l1;
+    return new ListNode(l1.val, mergeTwoLists(l1.next, l2));
   } else {
-    l2.next = mergeTwoLists(l1, l2.next);
-    return l2;
+    return new ListNode(l2.val, mergeTwoLists(l2.next, l1));
   }
 }
 // @lc code=end
