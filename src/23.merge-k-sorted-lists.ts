@@ -80,15 +80,14 @@ import { ListNode } from "../data_structure/module";
 export function mergeKLists(lists: Array<ListNode | null>): ListNode | null {
   let min = Infinity;
   let arr: Array<number> = [];
+  lists = lists.filter((item) => !!item);
   lists.forEach((curNode, i) => {
-    if (curNode) {
-      if (min === curNode!.val) {
-        arr.push(i);
-      } else if (min > curNode!.val) {
-        arr = [];
-        arr.push(i);
-        min = curNode!.val;
-      }
+    if (min === curNode!.val) {
+      arr.push(i);
+    } else if (min > curNode!.val) {
+      arr = [];
+      arr.push(i);
+      min = curNode!.val;
     }
   });
   arr.forEach((index) => {
