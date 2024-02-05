@@ -1,5 +1,6 @@
 import { expect } from "chai";
-import { ListNode, TestUnitType } from "../data_structure/module";
+import { TestUnitType } from "../data_structure/module";
+import { generateListNodeFromArr } from "../data_structure/utils";
 import { addTwoNumbers } from "../src/2.add-two-numbers";
 
 describe("testUnit", () => {
@@ -18,13 +19,3 @@ describe("testUnit", () => {
     });
   });
 });
-function generateListNodeFromArr(arr: number[]): ListNode {
-  const Node = new ListNode();
-  arr
-    .map((e) => new ListNode(e))
-    .reduce((pre, cur) => {
-      pre.next = cur;
-      return pre.next;
-    }, Node);
-  return Node.next!;
-}

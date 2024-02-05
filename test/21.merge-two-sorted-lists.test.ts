@@ -1,5 +1,6 @@
 import { expect } from "chai";
-import { ListNode, TestUnitType } from "../data_structure/module";
+import { TestUnitType } from "../data_structure/module";
+import { generateListNodeFromArr } from "../data_structure/utils";
 import { mergeTwoLists } from "../src/21.merge-two-sorted-lists";
 
 describe("testUnit", () => {
@@ -25,13 +26,3 @@ describe("testUnit", () => {
     });
   });
 });
-function generateListNodeFromArr(arr: number[]): ListNode {
-  const Node = new ListNode();
-  arr
-    .map((e) => new ListNode(e))
-    .reduce((pre, cur) => {
-      pre.next = cur;
-      return pre.next;
-    }, Node);
-  return Node.next!;
-}
