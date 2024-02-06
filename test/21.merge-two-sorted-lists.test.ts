@@ -4,7 +4,7 @@ import { generateListNodeFromArr } from "../data_structure/utils";
 import { mergeTwoLists } from "../src/21.merge-two-sorted-lists";
 
 describe("testUnit", () => {
-  it("should return", () => {
+  it("NO.21", () => {
     const testUnits: Array<TestUnitType<typeof mergeTwoLists>> = [
       {
         input: [

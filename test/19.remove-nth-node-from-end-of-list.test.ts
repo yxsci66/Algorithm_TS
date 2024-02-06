@@ -4,7 +4,7 @@ import { generateListNodeFromArr } from "../data_structure/utils";
 import { removeNthFromEnd } from "../src/19.remove-nth-node-from-end-of-list";
 
 describe("testUnit", () => {
-  it("should return", () => {
+  it("NO.19", () => {
     const testUnits: Array<TestUnitType<typeof removeNthFromEnd>> = [
       {
         input: [generateListNodeFromArr([2, 4, 6]), 1],

@@ -3,7 +3,7 @@ import { twoSum } from "../src/1.two-sum";
 import { TestUnitType } from "../data_structure/module";
 
 describe("twoSum", () => {
-  it("should return the indices of the two numbers that add up to the target", () => {
+  it("NO.1", () => {
     const testUnits: Array<TestUnitType<typeof twoSum>> = [
       {
         input: [[1, 2, 3], 3],

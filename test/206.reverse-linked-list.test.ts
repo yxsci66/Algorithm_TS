@@ -4,7 +4,7 @@ import { generateListNodeFromArr } from "../data_structure/utils";
 import { reverseList } from "../src/206.reverse-linked-list";
 
 describe("testUnit", () => {
-  it("should return", () => {
+  it("NO.206", () => {
     const testUnits: Array<TestUnitType<typeof reverseList>> = [
       {
         input: [[1, 4, 5]].map(generateListNodeFromArr) as any,

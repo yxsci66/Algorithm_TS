@@ -4,7 +4,7 @@ import { generateListNodeFromArr } from "../data_structure/utils";
 import { addTwoNumbers } from "../src/2.add-two-numbers";
 
 describe("testUnit", () => {
-  it("should return", () => {
+  it("NO.2", () => {
     const testUnits: Array<TestUnitType<typeof addTwoNumbers>> = [
       {
         input: [

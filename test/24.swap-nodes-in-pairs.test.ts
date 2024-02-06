@@ -4,7 +4,7 @@ import { generateListNodeFromArr } from "../data_structure/utils";
 import { swapPairs } from "../src/24.swap-nodes-in-pairs";
 
 describe("testUnit", () => {
-  it("should return", () => {
+  it("NO.24", () => {
     const testUnits: Array<TestUnitType<typeof swapPairs>> = [
       {
         input: [[1, 4, 5]].map(generateListNodeFromArr) as any,

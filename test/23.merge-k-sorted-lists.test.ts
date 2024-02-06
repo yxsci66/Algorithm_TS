@@ -4,7 +4,7 @@ import { generateListNodeFromArr } from "../data_structure/utils";
 import { mergeKLists } from "../src/23.merge-k-sorted-lists";
 
 describe("testUnit", () => {
-  it("should return", () => {
+  it("NO.23", () => {
     const testUnits: Array<TestUnitType<typeof mergeKLists>> = [
       {
         input: [
