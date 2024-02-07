@@ -74,15 +74,33 @@ import { ListNode } from "../data_structure/module";
  * @param {ListNode | null} node - the current node being processed
  * @return {ListNode | null} the head of the reversed linked list
  */
-export function reverseList(
-  head: ListNode | null,
-  node: ListNode | null = null
-): ListNode | null {
-  if (!head) {
-    return node;
+// export function reverseList(
+//   head: ListNode | null,
+//   node: ListNode | null = null
+// ): ListNode | null {
+//   if (!head) {
+//     return node;
+//   }
+//   const next = head.next;
+//   head.next = node;
+//   return reverseList(next, head);
+// }
+
+/**
+ * (While-loop)Reverses a linked list.
+ *
+ * @param {ListNode | null} head - The head of the linked list
+ * @returns {ListNode | null} The head of the reversed linked list
+ */
+export function reverseList(head: ListNode | null): ListNode | null {
+  let prev: ListNode | null = null;
+  let current = head;
+  while (current) {
+    const next: ListNode | null = current.next;
+    current.next = prev;
+    prev = current;
+    current = next;
   }
-  const next = head.next;
-  head.next = node;
-  return reverseList(next, head);
+  return prev;
 }
 // @lc code=end
