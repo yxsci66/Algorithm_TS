@@ -71,28 +71,33 @@ export function reverseKGroup(
   head: ListNode | null,
   k: number
 ): ListNode | null {
-  if (!head || k <= 1) return head;
+  if (!head || k <= 1) {
+    return head;
+  }
+
   let count = 0;
+  let currentNode: ListNode | null = head;
+  while (currentNode && count < k) {
+    count++;
+    currentNode = currentNode?.next;
+  }
+
+  if (count < k) {
+    return head;
+  }
+
+  count = 0;
+  let prevNode: ListNode | null = null;
+  let nextNode: ListNode | null = null;
   let current: ListNode | null = head;
   while (current && count < k) {
-    current = current.next;
     count++;
+    nextNode = current.next;
+    current.next = prevNode;
+    prevNode = current;
+    current = nextNode;
   }
-  if (count < k) return head;
-  let prev: ListNode | null = null;
-  let next: ListNode | null = null;
-  let temp: ListNode | null = head;
-  count = 0;
-  while (temp && count < k) {
-    next = temp.next;
-    temp.next = prev;
-    prev = temp;
-    temp = next;
-    count++;
-  }
-  if (next) {
-    head.next = reverseKGroup(next, k);
-  }
-  return prev;
+  head.next = reverseKGroup(nextNode, k);
+  return prevNode;
 }
 // @lc code=end
