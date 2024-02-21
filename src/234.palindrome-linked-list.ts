@@ -64,19 +64,35 @@ import { ListNode } from "../data_structure/module";
  * @param {ListNode | null} head - The head of the linked list
  * @returns {boolean} - True if the linked list is a palindrome, false otherwise
  */
-export function isPalindrome(head: ListNode | null): boolean {
+/* export function isPalindrome(head: ListNode | null): boolean {
   function isPalindromRecursive(recursiveHead: ListNode | null): boolean {
     if (recursiveHead === null) {
       return true;
     }
-
     const next: boolean = isPalindromRecursive(recursiveHead.next);
     const valid: boolean = recursiveHead.val === head!.val;
-
     head = head!.next;
     return next && valid;
   }
-
   return isPalindromRecursive(head);
+} */
+
+/**
+ * string appending prefix comparing with string ending suffix
+ * Check if a given linked list is a palindrome.
+ * @param {ListNode | null} head - The head of the linked list
+ * @returns {boolean} - True if the linked list is a palindrome, false otherwise
+ */
+export function isPalindrome(head: ListNode): boolean {
+  let leftToRightString: string = "";
+  let rightToLeftString: string = "";
+
+  let current: ListNode | null = head;
+  while (current) {
+    leftToRightString += String(current.val);
+    rightToLeftString = String(current.val) + rightToLeftString;
+    current = current.next;
+  }
+  return leftToRightString === rightToLeftString;
 }
 // @lc code=end
