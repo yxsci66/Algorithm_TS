@@ -18,6 +18,7 @@
   },
   "include": [
     "src",
+    "interview",
     "test/**/*.test.ts",
     "data_structure"
   ],
