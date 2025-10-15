@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { TestUnitType } from "../data_structure/module";
-import { trap } from "../src/42.trapping-rain-water";
+import { trap } from "../src_old_2507/42.trapping-rain-water";
 
 describe("test", () => {
   it("NO.42", () => {

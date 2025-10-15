@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import { TestUnitType } from "../data_structure/module";
 import { generateListNodeFromArr } from "../data_structure/utils";
-import { removeNthFromEnd } from "../src/19.remove-nth-node-from-end-of-list";
+import { removeNthFromEnd } from "../src_old_2507/19.remove-nth-node-from-end-of-list";
 
 describe("testUnit", () => {
   it("NO.19", () => {

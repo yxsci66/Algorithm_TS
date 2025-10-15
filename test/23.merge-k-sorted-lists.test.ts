@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import { TestUnitType } from "../data_structure/module";
 import { generateListNodeFromArr } from "../data_structure/utils";
-import { mergeKLists } from "../src/23.merge-k-sorted-lists";
+import { mergeKLists } from "../src_old_2507/23.merge-k-sorted-lists";
 
 describe("testUnit", () => {
   it("NO.23", () => {

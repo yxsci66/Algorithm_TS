@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { TestUnitType } from "../data_structure/module";
-import { longestValidParentheses } from "../src/32.longest-valid-parentheses";
+import { longestValidParentheses } from "../src_old_2507/32.longest-valid-parentheses";
 
 describe("testUnit", () => {
   it("NO.32", () => {

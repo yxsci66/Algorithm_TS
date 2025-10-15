@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { TestUnitType } from "../data_structure/module";
-import { firstMissingPositive } from "../src/41.first-missing-positive";
+import { firstMissingPositive } from "../src_old_2507/41.first-missing-positive";
 
 describe("testUnit", () => {
   it("NO.41", () => {

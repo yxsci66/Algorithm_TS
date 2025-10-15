@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import { TestUnitType } from "../data_structure/module";
 import { generateListNodeFromArr } from "../data_structure/utils";
-import { sortList } from "../src/148.sort-list";
+import { sortList } from "../src_old_2507/148.sort-list";
 
 describe("testUnit", () => {
   it("NO.148", () => {

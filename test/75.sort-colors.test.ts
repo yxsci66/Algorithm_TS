@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { TestUnitType } from "../data_structure/module";
-import { sortColors } from "../src/75.sort-colors";
+import { sortColors } from "../src_old_2507/75.sort-colors";
 
 describe("twoSum", () => {
   it("NO.75", () => {

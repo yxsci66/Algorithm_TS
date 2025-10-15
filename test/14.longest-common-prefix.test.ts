@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { TestUnitType } from "../data_structure/module";
-import { longestCommonPrefix } from "../src/14.longest-common-prefix";
+import { longestCommonPrefix } from "../src_old_2507/14.longest-common-prefix";
 
 describe("testUnit", () => {
   it("NO.14", () => {

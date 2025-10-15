@@ -1,5 +1,5 @@
 import { expect } from "chai";
-import { twoSum } from "../src/1.two-sum";
+import { twoSum } from "../src_old_2507/1.two-sum";
 import { TestUnitType } from "../data_structure/module";
 
 describe("twoSum", () => {

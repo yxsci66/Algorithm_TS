@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { TestUnitType } from "../data_structure/module";
-import { jump } from "../src/45.jump-game-ii";
+import { jump } from "../src_old_2507/45.jump-game-ii";
 
 describe("test", () => {
   it("NO.45", () => {

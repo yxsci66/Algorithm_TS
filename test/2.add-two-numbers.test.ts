@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import { TestUnitType } from "../data_structure/module";
 import { generateListNodeFromArr } from "../data_structure/utils";
-import { addTwoNumbers } from "../src/2.add-two-numbers";
+import { addTwoNumbers } from "../src_old_2507/2.add-two-numbers";
 
 describe("testUnit", () => {
   it("NO.2", () => {

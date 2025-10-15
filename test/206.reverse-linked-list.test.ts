@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import { TestUnitType } from "../data_structure/module";
 import { generateListNodeFromArr } from "../data_structure/utils";
-import { reverseList } from "../src/206.reverse-linked-list";
+import { reverseList } from "../src_old_2507/206.reverse-linked-list";
 
 describe("testUnit", () => {
   it("NO.206", () => {

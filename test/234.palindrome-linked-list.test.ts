@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import { TestUnitType } from "../data_structure/module";
 import { generateListNodeFromArr } from "../data_structure/utils";
-import { isPalindrome } from "../src/234.palindrome-linked-list";
+import { isPalindrome } from "../src_old_2507/234.palindrome-linked-list";
 
 describe("testUnit", () => {
   it("NO.234", () => {

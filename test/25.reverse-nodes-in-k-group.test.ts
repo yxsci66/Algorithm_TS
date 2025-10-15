@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import { TestUnitType } from "../data_structure/module";
 import { generateListNodeFromArr } from "../data_structure/utils";
-import { reverseKGroup } from "../src/25.reverse-nodes-in-k-group";
+import { reverseKGroup } from "../src_old_2507/25.reverse-nodes-in-k-group";
 
 describe("testUnit", () => {
   it("NO.25", () => {

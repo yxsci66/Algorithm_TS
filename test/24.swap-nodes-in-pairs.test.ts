@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import { TestUnitType } from "../data_structure/module";
 import { generateListNodeFromArr } from "../data_structure/utils";
-import { swapPairs } from "../src/24.swap-nodes-in-pairs";
+import { swapPairs } from "../src_old_2507/24.swap-nodes-in-pairs";
 
 describe("testUnit", () => {
   it("NO.24", () => {

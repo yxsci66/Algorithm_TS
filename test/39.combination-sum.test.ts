@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { TestUnitType } from "../data_structure/module";
-import { combinationSum } from "../src/39.combination-sum";
+import { combinationSum } from "../src_old_2507/39.combination-sum";
 
 describe("twoSum", () => {
   it("NO.39", () => {

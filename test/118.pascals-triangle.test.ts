@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { TestUnitType } from "../data_structure/module";
-import { generate } from "../src/118.pascals-triangle";
+import { generate } from "../src_old_2507/118.pascals-triangle";
 
 describe("testUnit", () => {
   it("NO.148", () => {

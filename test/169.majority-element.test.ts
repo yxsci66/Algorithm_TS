@@ -1,6 +1,6 @@
 import { expect } from "chai";
 import { TestUnitType } from "../data_structure/module";
-import { majorityElement } from "../src/169.majority-element";
+import { majorityElement } from "../src_old_2507/169.majority-element";
 
 describe("testUnit", () => {
   it("NO.169", () => {
