@@ -6,7 +6,6 @@ export async function promiseAllSettledLimit(
   const results = new Array(arr.length); // 存储结果的数组
   let currentIndex = 0; // 当前处理的 Promise 索引
   let running = 0; // 当前正在执行的 Promise 数量
-
   return new Promise((resolve) => {
     // 递归函数，用于调度 Promise 的执行
     function runNext() {
@@ -15,13 +14,10 @@ export async function promiseAllSettledLimit(
         resolve(results);
         return;
       }
-
       const currentPromise = arr[currentIndex]!;
       const currentPromiseIndex = currentIndex;
-
       currentIndex++;
       running++;
-
       // 执行当前 Promise
       currentPromise
         .then((value: any) => {
@@ -37,13 +33,11 @@ export async function promiseAllSettledLimit(
           // 继续调度下一个 Promise 的执行
           runNext();
         });
-
       // 如果正在执行的 Promise 数量小于并发限制数，继续调度下一个 Promise 的执行
       if (running < limit) {
         runNext();
       }
     }
-
     // 开始调度 Promise 的执行
     runNext();
   });
